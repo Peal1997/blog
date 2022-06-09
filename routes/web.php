@@ -35,8 +35,10 @@ Route::get('dashboard',[userController::class, 'index']) ->name('dashboard');
 Route::get('delete/{id}',[userController::class, 'destroy']) ->name('staff.destroy');
 Route::get('create',[postController::class, 'create']) ->name('create');
 Route::post('create',[postController::class, 'create_post']) ->name('create.post');
+//update data
 Route::get('update/{id}',[userController::class, 'update']) ->name('user.update');
 Route::post('edit',[userController::class, 'edit']) ->name('user.edit');
+
 Route::get('post_dashboard',[userController::class, 'post_dashboard']) ->name('post.dashboard');
 Route::get('post_delete/{id}',[postController::class, 'destroy']) ->name('post.destroy');
 Route::get('logout',[userController::class, 'logout']) ->name('logout');
